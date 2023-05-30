@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Microsoft.AspNetCore.Identity.IdentityUser>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Users</h1>
+
+<form method="get" action="@Url.Action("Index")">
+    <div class="form-group">
+        <label for="role">Search by Role:</label>
+        <select class="form-control" name="role" id="role">
+            <option value="">All</option>
+            <option value="client">Clients</option>
+            <option value="seller">Sellers</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="searchName">Search by Name:</label>
+        <input type="text" class="form-control" name="searchName" id="searchName">
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<p>
+    <a class="btn btn-primary" href="@Url.Action("ExportUsers", new { role = "client" })">Export Clients as XML</a>
+    <a class="btn btn-primary" href="@Url.Action("ExportUsers", new { role = "seller" })">Export Sellers as XML</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.UserName)</th>
+            <th>@Html.DisplayNameFor(model => model.Email)</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.UserName)</td>
+                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                <td>
+                    <a class="btn btn-primary" asp-action="Manage" asp-route-id="@item.Id">Manage</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are you sure you want to delete this user?')">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

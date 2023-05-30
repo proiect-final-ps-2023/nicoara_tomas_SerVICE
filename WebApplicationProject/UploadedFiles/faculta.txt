@@ -1,0 +1,14 @@
+https://moodle.cs.utcluj.ro/pluginfile.php/170884/mod_resource/content/1/Lab3.pdf - Inteligenta artificiala - lab2 + lab3 de dat upload
+
+
+SSC Proiect links:
+https://users.utcluj.ro/~onigaf/files/teaching/AC/AC_indrumator_laborator.pdf
+https://digilent.com/reference/programmable-logic/nexys-4-ddr/reference-manual
+http://ww1.microchip.com/downloads/en/DeviceDoc/bluetooth_cr_UG-v1.0r.pdf?_ga=2.128751439.2130281395.1666850423-1786724441.1666850423
+https://digilent.com/reference/pmod/pmodbt2/reference-manual
+https://digilent.com/reference/pmod/pmodbt2/start
+https://digilent.com/reference/learn/programmable-logic/tutorials/nexys-4-ddr-user-demo/start
+https://github.com/Digilent/Nexys-4-DDR-OOB?_ga=2.65534701.2130281395.1666850423-1786724441.1666850423
+https://www.youtube.com/watch?v=DTECU5JwpCc
+https://francis-press.com/uploads/papers/cqzFKqzDRDUVDs2Md34qnYfGyDKWvfVBs1rnURDJ.pdf
+https://www.google.com/search?client=opera-gx&q=android+studio+uart+example&sourceid=opera&ie=UTF-8&oe=UTF-8

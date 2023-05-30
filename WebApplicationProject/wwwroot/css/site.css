@@ -1,0 +1,43 @@
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+.container {
+    width: 960px;
+    height: auto;
+}
+
+a:hover {
+    color: #999;
+    text-decoration: none;
+}
+
+<button id="corner-button" > Click me!</button >
+
+#corner-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+

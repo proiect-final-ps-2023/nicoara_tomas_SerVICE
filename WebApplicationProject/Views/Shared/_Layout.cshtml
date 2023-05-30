@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - SerVICE</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/WebApplicationProject.styles.css" asp-append-version="true">
+
+    <style>
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            padding: 12px 20px;
+            margin-right: 12px;
+            border-radius: 10px;
+            font-family: "Arial", sans-serif;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+            .navbar-nav .nav-link.white {
+                background-color: #fff;
+                color: #000;
+                border-color: #fff;
+            }
+
+                .navbar-nav .nav-link.white:hover {
+                    background-color: #000;
+                    color: #fff;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+                }
+
+            .navbar-nav .nav-link:hover {
+                background-color: #000;
+                color: #000;
+                box-shadow: 0px 0px 10px rgba(240, 240, 240, 0.8);
+            }
+
+        h1.display-4 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .form-group.text-right {
+            margin-bottom: 0;
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebApplicationProject</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                    </li>
+
+                    <li class="nav-item">
+                            <a class="nav-link white" asp-area="" asp-controller="Posts" asp-action="Index">Posts</a>
+                    </li>
+                    
+                    <!--
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Users" asp-action="Index">Users</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Users" asp-action="ShowSearchFrom">Search</a>
+                    </li>
+                    -->
+                    
+                    <li class="nav-item">
+                            <a class="nav-link white" asp-area="" asp-controller="StreamFileUpload" asp-action="Index">Upload</a>
+                    </li>
+
+                    @if (User.IsInRole("Administrator"))
+                    {
+                        <li class="nav-item">
+                                <a class="nav-link white" asp-area="" asp-controller="Admin" asp-action="Index">AdminI</a>
+                        </li>
+                    }
+
+                        @if (User.IsInRole("Administrator") || User.IsInRole("client") || User.IsInRole("seller"))
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link white" asp-area="" asp-controller="Chat" asp-action="Index">Chat</a>
+                        </li>
+                    }
+                </ul>
+                <partial name="_LoginPartial" />
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2023 - WebApplicationProject - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
+</footer>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

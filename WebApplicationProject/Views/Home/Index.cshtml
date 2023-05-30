@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
+    ViewBag.Title = "SerVICE | Home";
+}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Welcome to SerVICE</h1>
+        <p class="lead">Get your IT services online and connect with potential clients. Showcase your services and let the world know about your expertise.</p>
+        <p>
+            <li class="btn btn-primary btn-lg">
+                <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Register">Sign Up</a>
+            </li>
+            <li class="btn btn-success btn-lg">
+                <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Login">Log In</a>
+            </li>
+        </p>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Showcase Your Expertise</h2>
+            <p>With SerVICE, you can showcase your IT services to potential clients. Let them know what you specialize in and how you can help them.</p>
+            <p><a class="btn btn-secondary" href="/tutorial/showcase-expertise" role="button">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Connect with Potential Clients</h2>
+            <p>Explore our platform and connect with potential clients who need your IT services. Follow businesses that interest you and stay up to date on their requirements.</p>
+            <p><a class="btn btn-secondary" href="/tutorial/connect-potential-clients" role="button">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Join the Community</h2>
+            <p>SerVICE is more than just a platform for IT services - it's a community. Join us and connect with other professionals who share your interests and passions.</p>
+            <p><a class="btn btn-secondary" href="/tutorial/join-community" role="button">Learn more &raquo;</a></p>
+        </div>
+    </div>
+</div>
+
+
+@*<div class="container mt-5">
+    <div class="col-md-4">
+        <h1>Buffered File Upload</h1>
+
+        <hr />
+
+        <form method="post" enctype="multipart/form-data">
+            <input type="file" name="file" />
+            <button type="submit"class="btn btn-primary">Upload Buff File</button>
+        </form>
+
+        @if (ViewBag.Message != null)
+        {
+            <div class="alert" style="margin-top:20px">
+                @ViewBag.Message
+            </div>
+        }
+    </div>
+
+    <div class="col-md-4">
+        <h1>Stream File Upload</h1>
+
+        <hr />
+
+        <div>
+            <form asp-route="StreamFileUpload/Index"  enctype="multipart/form-data" method="POST">
+                <input type="file" name="file" /> 
+                <button type="submit" class="btn btn-primary">Upload Stream File</button>
+            </form>
+        </div>
+
+        @if(ViewBag.Message != null)
+        {
+            <div class="alert" style="margin-top:20px">
+                @ViewBag.Message
+            </div>
+        }
+    </div>
+</div>*@

@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col"></div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="userInput">User</label>
+                    <input type="text" class="form-control" id="userInput" value="@User.Identity?.Name!" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="messageInput">Message</label>
+                    <input type="text" class="form-control" id="messageInput">
+                </div>
+                <button type="button" class="btn btn-primary" id="sendButton">Send Message</button>
+                <button type="button" class="btn btn-secondary" id="clearButton">Clear Messages</button>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <ul id="messagesList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="~/lib/@@aspnet/signalr/dist/browser/signalr.js"></script>
+    <script src="~/js/chat.js"></script>
+    @*<script src="~/js/es5-chat.js"></script>*@
+</body>
+</html>
